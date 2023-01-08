@@ -2,35 +2,16 @@
 require_once 'PDOConnection.php';
 $id = $_GET['id'];
 if (isset($_POST['update'])) {
-    // Get the userid
 
-    // Posted Values  
-    
-    // $user_id = $_POST['user_id'];
-    // $product_id = $_POST['product_id'];
-    // $bill_id = $_POST['bill_id'];
-    // $fname = $_POST['f_name'];
-    // $lname = $_POST['l_name'];
-    // $Email = $_POST['email'];
-    // $phone = $_POST['phone'];
-    // $address = $_POST['address'];
     $status = $_POST['status'];
     
    
 
     // Query for Query for Updation
     $sql = "UPDATE orders set status=:st where id='$id'";
-    //Prepare Query for Execution
+  
     $query = $conn->prepare($sql);
-    // Bind the parameters
-    // $query->bindParam(':uid', $user_id, PDO::PARAM_STR);
-    // $query->bindParam(':pid', $product_id, PDO::PARAM_STR);
-    // $query->bindParam(':bid', $bill_id, PDO::PARAM_STR);
-    // $query->bindParam(':fn', $fname, PDO::PARAM_STR);
-    // $query->bindParam(':ln', $lname, PDO::PARAM_STR);
-    // $query->bindParam(':em', $Email, PDO::PARAM_STR);
-    // $query->bindParam(':ph', $phone, PDO::PARAM_STR);
-    // $query->bindParam(':ad', $address, PDO::PARAM_STR);
+
     $query->bindParam(':st', $status, PDO::PARAM_STR);
 
     
@@ -74,7 +55,7 @@ if (isset($_POST['update'])) {
         <form name="insertrecord" method="post">
             <div class="row">
                 <div class="col-md-4"><b>status</b>
-                    <select name="status" class="form-control" id="status"
+                    <select name="status" class="form-control" id="status" 
                         value="<?php echo htmlentities($result->status); ?>">
                         <option value="pending">pending</option>
                         <option value="completed">completed</option>
@@ -82,9 +63,9 @@ if (isset($_POST['update'])) {
                 </div>
             </div>
 
-            <div class="row" style="margin-top:1%">
-                <div class="col-md-8">
-                    <input type="submit" name="update" value="Update" style="width:100%">
+            <div class="row" style="margin-top:3%">
+                <div class="col-md-8 ">
+                    <input type="submit" name="update" value="Update" style="width:48%; background-color: #1e78fc; border-color: #1e78fc; color: white; border-radius: 10px;">
                 </div>
             </div>
 

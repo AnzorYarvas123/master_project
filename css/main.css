@@ -42,6 +42,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/Poppins/Poppins-Regular.ttf'); 
+  background-color: #6363637e
 }
 
 @font-face {

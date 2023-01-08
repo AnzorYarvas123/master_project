@@ -16,7 +16,7 @@ if (isset($_SESSION["email"])) {
 <html lang="en">
 <?php require_once './layout/head.php' ?>
 
-<body class="animsition">
+<body class="animsition" >
 
 	<!-- Header -->
 	<?php require_once './layout/header.php' ?>
@@ -31,19 +31,19 @@ if (isset($_SESSION["email"])) {
 	$products = getDataByForeignKey("products", $category_id);
 	?>
 	<!-- breadcrumb -->
-	<div class="container">
-		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04">
+	<div   style="background-color: #5a5a5a20">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg" >
+			<a href="index.php" class="mtext-80 cl8 hov-cl1 trans-04" >
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<a href="product.php?categoryid=<?= $category["id"] ?>" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="product.php?categoryid=<?= $category["id"] ?>" class="mtext-80 cl8 hov-cl1 trans-04">
 				<?= $category["name"] ?>
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<span class="stext-109 cl4">
+			<span class="mtext-80 cl4">
 				<?= $product["name"] ?>
 			</span>
 		</div>
@@ -53,7 +53,7 @@ if (isset($_SESSION["email"])) {
 
 
 	<!-- Product Detail -->
-	<section class="sec-product-detail bg0 p-t-65 p-b-60">
+	<section class="sec-product-detail p-t-65 p-b-60"  style="background-color: #5a5a5a20">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-7 p-b-30">
@@ -94,33 +94,33 @@ if (isset($_SESSION["email"])) {
 							<?= $product["description"] ?>
 						</p>
 
-						<?php if (isset($_SESSION["email"])) : ?>
-							<div class="p-t-33">
-								<form action="" method="post">
-									<div class="flex-w flex-r-m p-b-10">
-										<div class="size-204 flex-w flex-m respon6-next">
-											<div class="wrap-num-product flex-w m-r-20 m-tb-10">
-												<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-													<i class="fs-16 zmdi zmdi-minus"></i>
-												</div>
+						<div class="p-t-33">
+							<form action="" method="post">
+								<div class="flex-w flex-r-m p-b-10">
+									<div class="size-204 flex-w flex-m respon6-next bg-body">
+										<!-- <div class="wrap-num-product flex-w m-r-20 m-tb-10"> -->
+											<!-- <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+												<i class="fs-16 zmdi zmdi-minus"></i>
+											</div> -->
 
-												<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+											<input  style="background-color: #eaeaea; color:#eaeaea" type="number" name="num-product" value="1">
 
-												<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-													<i class="fs-16 zmdi zmdi-plus"></i>
-												</div>
-											</div>
+											<!-- <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+												<i class="fs-16 zmdi zmdi-plus"></i>
+											</div> -->
+										<!-- </div> -->
 
-											<button type="submit" name="submit" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-												Add to cart
-											</button>
-										</div>
+										<button type="submit" name="submit" class="flex-c-m stext-101 cl0 size-101 bg5 bor1 hov-btn4 p-lr-15 trans-04 js-addcart-detail btn-outline-success">
+											Add to cart
+										</button>
 									</div>
-								</form>
-							</div>
+								</div>
+							</form>
+						</div>
 
-							<?php
-							if (isset($_POST['submit'])) {
+						<?php
+						if (isset($_POST['submit'])) {
+							if (isset($_SESSION["email"])) {
 								$quantity = $_POST['num-product'];
 								$sql = "SELECT * FROM cart WHERE product_id= $id AND user_id= $user_id";
 								$stmt = $conn->prepare($sql);
@@ -130,12 +130,12 @@ if (isset($_SESSION["email"])) {
 								// print_r($productInCart);
 								// echo (count($productInCart));
 								if (count($productInCart) > 0) {
-									$quantityUpdated = (int)$productInCart[0]['quantity'] + (int)$quantity;
+									$quantityUpdated = (int)$productInCart[0] + (int)$quantity;
 									// echo $quantityUpdated;
 									$sql = "UPDATE cart SET quantity = $quantityUpdated WHERE product_id= $id AND user_id= $user_id";
 									$stmt = $conn->prepare($sql);
 									$stmt->execute();
-									echo "<script> window.location = '#related'</script>";
+									echo "<script> window.location = 'http://localhost/master1/product.php?categoryid=1'</script>";
 									echo "<script type='text/javascript'>toastr.warning('Updated the quantity')</script>";
 									echo "
 								<script>
@@ -147,7 +147,7 @@ if (isset($_SESSION["email"])) {
 									$sql = "INSERT INTO cart (user_id, product_id, quantity) VALUES ($user_id,$id,$quantity)";
 									$stmt = $conn->prepare($sql);
 									$stmt->execute();
-									echo "<script> window.location = '#related'</script>";
+									echo "<script> window.location = 'http://localhost/master1/product.php?categoryid=1'</script>";
 									echo '<script type="text/javascript">toastr.info("Added to cart")</script>';
 									echo "
 								<script>
@@ -156,10 +156,19 @@ if (isset($_SESSION["email"])) {
 								}
 							</script>";
 								}
+							} else {
+								addToCart($product, $_POST["num-product"]);
+								echo "<script> window.location = 'http://localhost/master1/product.php?categoryid=1</script>";
+								echo "
+								<script>
+								if ( window.history.replaceState ) {
+									window.history.replaceState( null, null, window.location.href );
+								}
+							</script>";
 							}
-							?>
+						}
+						?>
 
-						<?php endif; ?>
 					</div>
 				</div>
 			</div>
@@ -176,9 +185,9 @@ if (isset($_SESSION["email"])) {
 				<!-- Tab01 -->
 				<div class="tab01">
 					<!-- Nav tabs -->
-					<ul class="nav nav-tabs" role="tablist">
+					<ul class="nav nav-tabs" role="tablist" >
 						<li class="nav-item p-b-10">
-							<a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
+							<a class="nav-link active" style="background-color: #eaeaea" data-toggle="tab" href="#description" role="tab">Description</a>
 						</li>
 
 
@@ -293,7 +302,7 @@ if (isset($_SESSION["email"])) {
 
 
 	<!-- Related Products -->
-	<section class="sec-relate-product bg0 p-t-45 p-b-105">
+	<section class="sec-relate-product p-t-45 p-b-105" style="background-color: #5a5a5a20">
 		<div class="container">
 			<div class="p-b-45">
 				<h3 class="ltext-106 cl5 txt-center">

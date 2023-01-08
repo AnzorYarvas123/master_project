@@ -124,7 +124,7 @@ function add_category() {
         <td>'.$name.'</td>
         <td> <img src=img/'.$image.' style= width:50px; hieght:50px; > </td>
        <td> 
-       <a href="EditCategory.php?id='.$id.'" class="btn btn-warning" >Edit</a>
+       <a href="EditCategory.php?id='.$id.'" class="btn btn-success" >Edit</a>
        <a href="./backend/Delete_Category.php?id='.$id.'" class="btn btn-danger" >Delete</a></tr>';
 
         

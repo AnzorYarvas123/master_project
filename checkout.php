@@ -23,7 +23,7 @@ require_once './functions.php';
 
 
     <!-- breadcrumb -->
-    <div class="container">
+    <div  style="background-color: #5a5a5a20">
         <div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
             <a href="index.php" class="stext-109 cl8 hov-cl1 trans-04">
                 Home
@@ -72,47 +72,47 @@ require_once './functions.php';
     }
 
     ?>
-    <div class="container p-b-50 p-t-100">
+    <div class="p-b-50 p-t-100" style="background-color: #5a5a5a20">
         <div class="row">
             <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
                 <form id="billingForm" method="post" action="./placeorder.php">
-                    <h4 class="mtext-105 cl2 txt-center p-b-30">
-                        Billing information
+                    <h4 class="mtext-105 cl2 txt-center p-b-80 ">
+                   <b> Complete billing information</b>
                     </h4>
                     <input type="hidden" value="<?= $total ?>" name="total">
                     <label for="fname-billing">First Name:</label>
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" value="<?= $activeUser['f_name'] ?>" type="text" name="fname" id="fname-billing" placeholder="Your First Name" required pattern="^[A-Za-z]*">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" style="background-color: #5a5a5a3f" value="<?= $activeUser['f_name'] ?>" type="text" name="fname" id="fname-billing" placeholder="Your First Name" required pattern="^[A-Za-z]*">
 
                     </div>
                     <label for="lname-billing">Last Name:</label>
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" value="<?= $activeUser['l_name'] ?>" type="text" name="lname" id="lname-billing" placeholder="Your Last Name" required pattern="^[A-Za-z]*">
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" style="background-color: #5a5a5a3f"  value="<?= $activeUser['l_name'] ?>" type="text" name="lname" id="lname-billing" placeholder="Your Last Name" required pattern="^[A-Za-z]*">
 
                     </div>
                     <label for="email-billing">Email:</label>
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" value="<?= $activeUser['email'] ?>" type="text" name="email" id="email-billing" placeholder="Your Email Address" required>
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" style="background-color: #5a5a5a3f"  value="<?= $activeUser['email'] ?>" type="text" name="email" id="email-billing" placeholder="Your Email Address" required>
 
                     </div>
                     <label for="phone-billing">Phone:</label>
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="tel" name="phone" id="phone-billing" placeholder="Your Phone" required>
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" style="background-color: #5a5a5a3f"  type="tel" name="phone" id="phone-billing" placeholder="Your Phone" required>
 
                     </div>
                     <label for="address-confirm-billing">Address:</label>
 
                     <div class="bor8 m-b-20 how-pos4-parent">
-                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="address" id="address-confirm-billing" placeholder="Your address" required>
+                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" style="background-color: #5a5a5a3f"  type="text" name="address" id="address-confirm-billing" placeholder="Your address" required>
 
                     </div>
 
 
 
-                    <button type="submit" name="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                    <button type="submit" name="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" style="background-color: #6363639d" >
                         Place Order
                     </button>
                 </form>
@@ -120,7 +120,7 @@ require_once './functions.php';
 
 
             <div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
-                <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
+                <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm"style="background-color: #5a5a5a20">
                     <h4 class="mtext-109 cl2 p-b-30">
                         Cart Totals
                     </h4>
@@ -149,7 +149,7 @@ require_once './functions.php';
 
 
 
-                                    JOD X <?= $item['quantity']  ?>
+                                    JOD  
 
                                 </li>
                                 <br>
@@ -157,22 +157,22 @@ require_once './functions.php';
                         </ul>
                     </div>
                     <div class="flex-w flex-t p-t-27 p-b-33">
-                        <div class="size-208">
+                        <div class="size-200">
                             <span class="mtext-101 cl2">
                                 Total:
                             </span>
                         </div>
 
-                        <div class="size-209 p-t-1">
+                        <div class="size-209 p-t-1 p-l-5">
                             <span class="mtext-110 cl2">
                                 <?= $total ?> JOD
                             </span>
                         </div>
                     </div>
-                    <div class="flex-w flex-t p-t-27 p-b-33">
+                    <!-- <div class="flex-w flex-t p-t-27 p-b-33">
                         <div class="size-208">
                             <span class="mtext-101 cl2">
-                                Payment Method:
+                                Payment:
                             </span>
                         </div>
 
@@ -181,7 +181,7 @@ require_once './functions.php';
                                 Cash On Delivery
                             </span>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>

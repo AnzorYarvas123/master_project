@@ -9,17 +9,17 @@ include_once "functions.php";
 <?php add_category(); ?>
 
 
-<div class="container">
+<div class="container ">
   <div class="row">
     <div class="col">
     <form action="" method="post" enctype="multipart/form-data">
     
-    <div class="form-group">
-        <label for="category-title">Title</label>
+    <div class="form-group ">
+        <label for="category-title">Category Name: </label>
         <input name="name" type="text" class="form-control" style="width:75% ;">
     </div>
 <div><br></div>
-    <div class="form-group">
+    <div class="form-group ">
     <label for="Category image">Category Image</label>
     <input type="file" name="file">
   
@@ -30,7 +30,7 @@ include_once "functions.php";
 
     <div class="form-group">
         
-        <input name="submit" type="submit" class="btn btn-primary" value="Add Category">
+        <input name="submit" type="submit" class="btn btn-success rounded-pill" value="Add Category">
     </div>      
 </form>
 </div>

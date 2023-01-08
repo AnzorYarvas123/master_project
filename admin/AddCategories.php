@@ -1,43 +1,42 @@
-<?php 
+<?php
 
 include "layout\head.php";
 include "layout\header.php"
 
 
 
-?>
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+    ?>
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-                <?php
-require_once "backend/connection.php";
-require_once "backend/functions.php";
+    <?php
+                require_once "backend/connection.php";
+                require_once "backend/functions.php";
 
-?>
+                ?>
 
-<div class="container-fluid px-4">
-                        <h1 class="mt-1">Add Category</h1>
-                        <ol class="breadcrumb mb-4">
-                        </ol>
-</div>
+    <div class="container-fluid px-4">
+        <h1 class="mt-1">Add Category</h1>
+        <hr>
+    </div>
 
 
-<?php 
+    <?php
 
 include "./backend/add_categories.php"
 
-?>
-                    <!-- Page Heading -->
+    ?>
+    <!-- Page Heading -->
 
-                </div>
-                <!-- /.container-fluid -->
+</div>
+<!-- /.container-fluid -->
 
-            <!-- End of Main Content -->
+<!-- End of Main Content -->
 
-            <?php 
+<?php
 
-include "layout/footer.php"
+            include "layout/footer.php"
 
 
 
-?>
+                ?>

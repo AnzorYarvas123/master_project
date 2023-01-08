@@ -138,8 +138,8 @@ require_once './layout/header.php'
 
 
 
-<?php
-require './footer.php';
+	<?php
+require './layout/footer.php'
 ?>
 				</p>
 			</div>

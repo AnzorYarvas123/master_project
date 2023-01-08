@@ -60,7 +60,7 @@ if(isset($_GET['page'])){
 
 
         <td>
-        <a href="./EditProduct.php?id='.$id.'" class="btn btn-warning" >Edit</a>
+        <a href="./EditProduct.php?id='.$id.'" class="btn btn-success btn-gradient" >Edit</a>
         <a href="./backend/Delete_product.php?id='.$id.'" class="btn btn-danger" >Delete</a>
 
 
@@ -82,13 +82,3 @@ if(isset($_GET['page'])){
 </tbody>
 </table>
 
-<div class="pagenation" style="margin-left:225px ;">
-<?php
-
-for($btn=1;$btn<=$totalpages;$btn++){
-
-echo '<a href="allproducts.php?page='.$btn.'" class="btn btn-light my-5 mx-1 " >'.$btn.'</a>';
-
-}
-?>
-</div>

@@ -7,7 +7,7 @@ require_once './functions.php';
 
 <!-- Head -->
 <?php
-$pageName = "index";
+$pageName = "Circassian Activity";
 require_once './layout/head.php';
 
 if (!isset($_SESSION)) {
@@ -21,7 +21,6 @@ if (!isset($_SESSION)) {
 <html lang="en">
 <head>
 
-	<title>Know Circassian</title>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,8 +146,8 @@ require "./layout/header.php"
 	
 
 
-<?php
-require 'footer.php'
+	<?php
+require './layout/footer.php'
 ?>
 
 

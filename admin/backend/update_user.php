@@ -64,30 +64,32 @@ if (isset($_POST['update'])) {
         ?>
 
         <form name="insertrecord" method="post">
-            <div class="row">
+            <div >
                 <div class="col-md-4"><b>First Name</b>
                     <input type="text" name="f_name" value="<?php echo htmlentities($result->f_name); ?>"
                         class="form-control" required>
                 </div>
+                <br>
                 <div class="col-md-4"><b>Last Name</b>
                     <input type="text" name="l_name" class="form-control"
                         value="<?php echo htmlentities($result->l_name); ?>" required>
                 </div>
             </div>
-            <div class="row">
+            <br>
+            <div >
                 <div class="col-md-4"><b>Email</b>
                     <input type="email" name="email" class="form-control"
                         value="<?php echo htmlentities($result->email); ?>" required>
                 </div>
 
-
+                <br>
                 <div class="col-md-4"><b>Password</b>
                     <input type="text" name="password" class="form-control"
                         value="<?php echo htmlentities($result->password); ?>" required>
                 </div>
             </div>
-
-            <div class="row">
+            <br>
+            <div >
                 <div class="col-md-4"><b>role</b>
                     <select name="role" class="form-control" id="role"
                         value="<?php echo htmlentities($result->role); ?>">
@@ -97,9 +99,9 @@ if (isset($_POST['update'])) {
                 </div>
             </div>
 
-            <div class="row" style="margin-top:1%">
-                <div class="col-md-8">
-                    <input type="submit" name="update" value="Update" style="width:100%">
+            <div  style="margin-top:3%">
+                <div class="col-md-8 ">
+                    <input type="submit" name="update" value="Update" style="width:48%; background-color: #1e78fc; color: white; border-color: #1e78fc; font-size: 1.3rem; border-radius: 50px;">
                 </div>
             </div>
 

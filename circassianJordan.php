@@ -7,7 +7,7 @@ require_once './functions.php';
 
 <!-- Head -->
 <?php
-$pageName = "index";
+$pageName = "Circassian in Jordan";
 require_once './layout/head.php';
 
 if (!isset($_SESSION)) {
@@ -22,7 +22,6 @@ if (!isset($_SESSION)) {
 <html lang="en">
 <head>
 
-	<title>Circassian in Jordan</title>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -360,8 +359,8 @@ connecting Amman to its satellite Circassian and Chechen villages. Circa World
 	</div>
 
 
-<?php
-require 'footer.php'
+	<?php
+require './layout/footer.php'
 ?>
 
 

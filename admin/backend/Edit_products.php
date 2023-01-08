@@ -127,9 +127,9 @@ echo ("<script>location.href='allproducts.php'</script>");
 
 </div>
      
-     <div class="col-xs-3">
-       <!-- <input type="submit" name="draft" class="btn btn-warning btn-lg" value="Draft"> -->
-        <input type="submit" name="update" class="btn btn-primary btn-lg" value="Update">
+     <div class="col-xs-3 d-flex justify-content-center mb-5">
+       
+        <input type="submit" name="update" class="btn btn-primary btn-lg rounded-pill" value="Update">
     </div>
     
 </form>

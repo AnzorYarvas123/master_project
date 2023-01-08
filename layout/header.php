@@ -4,6 +4,7 @@ if (!isset($_SESSION)) {
     session_start();
     require_once './config.php';
     require_once './functions.php';
+
 }
 
 $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
@@ -94,7 +95,8 @@ $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
 
                                 <ul class="main-menu">
                                     <li>
-                                        <a href="./profile.php" class="text-light">MyAccount</a>
+                                        
+                                    <a href="./profile.php" class="text-light ">Account</a>
                                                          
                                         <ul class="sub-menu" style="background-color:#047d26">
                                             <li><a href="./profile.php" class="text-light">Profile</a></li>
@@ -122,7 +124,7 @@ $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
                             $rows = getRowsNumber("cart", ["user_id" => $user_id]) ?? "";
                         ?>
                             <div class="icon-header-item cl2 hov-cl1 trans-04 p-lr-11 icon-header-noti" data-notify="<?= $rows ?>">
-                                <a href="./cart.php" style="color:black">
+                                <a href="./cart.php" style="color:white">
                                     <i class="zmdi zmdi-shopping-cart"></i>
                                 </a>
                             </div>
@@ -141,10 +143,10 @@ $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
     </div>
 
     <!-- Header Mobile -->
-    <div class="wrap-header-mobile" style="background-color: #033702; color:white">
+    <div class="wrap-header-mobile " style="background-color: #033702; color:white">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <a href="index.html"><img src="./Logo.png" style="width: 40px; background-color: #033702; border:none;  margin-right: 60px"></a>
+            <a href="index.php"><img src="./Logo.png" style="width: 40px; background-color: #033702; border:none;  margin-right: 60px"></a>
         </div>
 
         <!-- Icon header -->
@@ -156,14 +158,12 @@ $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
 
                         <ul class="main-menu">
                             <li>
-                                <a href="./profile.php" class="text-light">MyAccount</a>
-                                <ul class="sub-menu">
+                                <a href="./profile.php" class="text-light "><?php echo $activeUser["f_name"] . " " . $activeUser['l_name'] ?></a>
+                                <ul class="sub-menu" style="background-color:#047d26">
                                     <li><a href="./profile.php" class="text-light">Profile</a></li>
                                     <li><a href="./register/includes/logout.inc.php" class="text-light">Logout</a></li>
                                 </ul>
-                                <span class="arrow-main-menu-m">
-                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                </span>
+                          
                             </li>
                         </ul>
                     <?php else : ?>
@@ -201,7 +201,7 @@ $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
         </div>
 
         <!-- Button show menu -->
-        <div class="btn-show-menu-mobile hamburger hamburger--squeeze ">
+        <div class="btn-show-menu-mobile hamburger hamburger--squeeze">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
@@ -211,7 +211,7 @@ $_SESSION['current_page'] = $_SERVER['REQUEST_URI'];
 
     <!-- Menu Mobile -->
     <div class="menu-mobile">
-        <ul class="main-menu-m">
+        <ul class="main-menu-m bg-success">
             <li>
                 <a href="index.php">Home</a>
             </li>

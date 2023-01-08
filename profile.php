@@ -38,11 +38,12 @@ require_once './functions.php';
 
     ?>
     <!-- Title page -->
-    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-color: black;">
-        <h2 class="mtext-105 cl0 txt-center">
+    <div class="d-flex" style="margin-bottom: 11.7%;">
+        <div>
+    <section class="bg-img1 txt-center m-tb-30 m-l-150 p-lr-35 p-tb-92" style="background-color: #004F16;">
+        <h2 class="mtext-105 cl0 txt-center" style="font-size: 3rem;">
             <?php echo $activeUser["f_name"] . " " . $activeUser['l_name'] ?>
-            <br>
-            <?php echo $activeUser["email"] ?>
+           
         </h2>
         <?php if ($activeUser['role'] == 'admin') : ?>
             <a href="./admin/index.php">
@@ -50,21 +51,17 @@ require_once './functions.php';
             </a>
         <?php endif ?>
     </section>
-    <!-- <section class="sec-product bg0 p-t-10 p-b-50">
-        <div class="container">
-            <div class="p-b-32">
-                <h3 class="ltext-105 cl5 txt-center respon1"></h3>
-                <h5 class="mtext-105 cl5 txt-center respon1"></h5>
-            </div>
         </div>
-    </section> -->
+
+        <div class="m-l-150">
     <section class="sec-product bg0 p-t-10 p-b-50">
         <div class="container">
             <div class="p-t-32">
-                <h3 class="mtext-105 cl5 txt-center respon1">Order History</h3>
+                <h3 class="mtext-105 cl5 txt-center respon1"  style="font-size: 3rem; font-weight: 600;">Order History</h3>
             </div>
         </div>
     </section>
+       
 
     <div class="container">
         <div class="row">
@@ -75,7 +72,7 @@ require_once './functions.php';
                             <tr class="table_head">
                                 <th class="column-1">Bill Number</th>
 
-                                <th class="column-2">Date Ordered</th>
+                              
                                 <th class="column-3">Total Price</th>
                                 <th class="column-4">Order Details</th>
                             </tr>
@@ -85,7 +82,7 @@ require_once './functions.php';
                                     <td class="column-1">
                                         <?= $bill['bill_number'] ?>
                                     </td>
-                                    <td class="column-2"><?= $bill['date_ordered'] ?></td>
+                                  
                                     <td class="column-3"><?= $bill['total_price'] ?> JOD </td>
                                     <td class="column-4 ">
                                         <a href="./order-details.php?bill_id=<?= $bill['id'] ?>&bill_num=<?= $bill['bill_number'] ?>">
@@ -104,8 +101,8 @@ require_once './functions.php';
 
         </div>
     </div>
-
-
+    </div>
+    </div>
 
 
     <!-- Footer -->

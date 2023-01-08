@@ -34,7 +34,7 @@ require_once 'PDOConnection.php';
                 <td><?php echo htmlentities($result->phone); ?></td>
                 <td><?php echo htmlentities($result->address); ?></td>
                 <td><?php echo htmlentities($result->status); ?></td>
-                <td><a href="updateorder.php?id=<?php echo htmlentities($result->id); ?>"class="btn btn-warning" >Edit</a></td>
+                <td><a href="updateorder.php?id=<?php echo htmlentities($result->id); ?>"class="btn btn-success" >Edit</a></td>
                 <td><a href="orders.php?del=<?php echo htmlentities($result->id); ?>"class="btn btn-danger" >Delete</a></td>
 
         </tr>

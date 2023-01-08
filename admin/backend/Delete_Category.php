@@ -11,9 +11,5 @@ if ($result) {
     echo "Error deleting record";
 }
 
-
-
-
-
 ?>
 

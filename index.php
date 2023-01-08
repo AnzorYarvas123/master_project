@@ -195,10 +195,10 @@ if (!isset($_SESSION)) {
 				<div class="block1 wrap-pic-w"  style="margin-left: 20px; margin-right: 20px">
 					<img src="./main_image/category4.png" alt="IMG-BANNER">
 
-					<a href="./circassianActivity.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+					<a href="./Elbrus/Elbrus.php" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 						<div class="block1-txt-child1 flex-col-l">
 							<span class="block1-name ltext-102 trans-04 p-b-8 text-light" >
-							Circassian <br>activity
+							Circassian <br>Reservation
 							</span>
 
 						</div>
@@ -324,8 +324,8 @@ if (!isset($_SESSION)) {
 	</div>
 
 
-<?php
-require "./footer.php";
+	<?php
+require './layout/footer.php'
 ?>
 
 

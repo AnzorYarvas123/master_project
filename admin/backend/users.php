@@ -24,7 +24,7 @@ require_once "PDOConnection.php";
                     <td><?php echo htmlentities($result->email); ?></td>
                     <td><?php echo htmlentities($result->password); ?></td>
                     <td><?php echo htmlentities($result->role); ?></td>
-                    <td><a href="updateuser.php?id=<?php echo htmlentities($result->id); ?>"class="btn btn-warning" >Edit</a></td>
+                    <td><a href="updateuser.php?id=<?php echo htmlentities($result->id); ?>"class="btn btn-success" >Edit</a></td>
                     <td><a href="allusers.php?del=<?php echo htmlentities($result->id); ?>"class="btn btn-danger" >Delete</a></td>
 
                 </tr>

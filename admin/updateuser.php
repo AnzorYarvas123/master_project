@@ -19,9 +19,7 @@ require_once "backend/functions.php";
 
 <div class="container-fluid px-4">
                         <h1 class="mt-1">Update user Data </h1>
-                        <ol class="breadcrumb mb-4">
-                        </ol>
-</div>
+                        <hr>
 
 
 <?php 

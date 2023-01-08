@@ -75,7 +75,7 @@ require_once './functions.php';
         <div class="container">
             <div class="p-b-32 p-l-25">
                 <h3 class="mtext-105 cl5  respon1">Details for Order Number: <?= $billNum ?></h3>
-                <h3 class="stext-105 cl5  respon1"> <b>Billed for:</b> <?= $orderDetails[0]['f_name'] . " " . $orderDetails[0]['l_name'] ?> <b>Email:</b> <?= $orderDetails[0]['email'] ?> <b>Phone:</b> <?= $orderDetails[0]['phone'] ?> <b>Billing Address:</b> <?= $orderDetails[0]['address'] ?> <b>Total Price:</b> <?= $orderDetails[0]['total_price'] ?> JOD</h3>
+                <h3 class="stext-105 cl5  respon1"> <b>Name: </b> <?= $orderDetails[0]['f_name'] . " " . $orderDetails[0]['l_name'] ?><br> <b>Email:</b> <?= $orderDetails[0]['email'] ?><br> <b>Phone:</b> <?= $orderDetails[0]['phone'] ?><br> <b>Billing Address:</b> <?= $orderDetails[0]['address'] ?><br> <b>Total Price:</b> <?= $orderDetails[0]['total_price'] ?> JOD</h3>
                 <h3 class="stext-105 cl5  respon1"></h3>
                 <h3 class="stext-105 cl5  respon1"></h3>
                 <h3 class="stext-105 cl5  respon1"></h3>
@@ -142,7 +142,7 @@ require_once './functions.php';
     </div>
 
 
-
+<div style="margin-bottom:12%"></div>
 
     <!-- Footer -->
     <?php require_once './layout/footer.php'; ?>

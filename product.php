@@ -13,15 +13,15 @@ $products = getAllData('products');
 
 ?>
 
-<body class="animsition">
+<body class="animsition"  >
 
 	<?php require_once './layout/header.php'; ?>
 
 
 
 	<!-- Product -->
-	<div class="bg0 m-t-23 p-b-140">
-		<div class="container">
+	<div   style="background-color: #5a5a5a20">
+		<div class="container p-tb-120" >
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 					<?php if (isset($_GET['categoryid'])) : ?>
@@ -32,9 +32,9 @@ $products = getAllData('products');
 						// die;
 						?>
 
-						<a href="./product.php?categoryid=all" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 <?php if ($categoryid == 'all') echo 'how-active1' ?>" data-filter="*">
-							All Products
-						</a>
+						<!-- <a href="./product.php?categoryid=all" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 <?php if ($categoryid == 'all') echo 'how-active1' ?>" data-filter="*">
+							Adiga Food
+						</a> -->
 
 						<?php foreach ($categories as $category) : ?>
 
@@ -44,9 +44,9 @@ $products = getAllData('products');
 
 						<?php endforeach; ?>
 					<?php else : ?>
-						<a href="./product.php?categoryid=all" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 ?>" data-filter="*">
+						<!-- <a href="./product.php?categoryid=all" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 ?>" data-filter="*">
 							All Products
-						</a>
+						</a> -->
 
 						<?php foreach ($categories as $category) : ?>
 
@@ -60,13 +60,9 @@ $products = getAllData('products');
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
-						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
-						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						Filter
-					</div>
+			
 
-					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
+					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search ">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
 						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
 						Search
@@ -74,13 +70,13 @@ $products = getAllData('products');
 				</div>
 
 				<!-- Search product -->
-				<div class="dis-none panel-search w-full p-t-10 p-b-15">
+				<div class="dis-none panel-search w-full bg-secondary">
 					<form action="" method="post">
 						<div class="bor8 dis-flex p-l-15">
 							<button type="submit" name="submit" class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-								<i class="zmdi zmdi-search"></i>
+								<i class="zmdi zmdi-search text-light"></i>
 							</button>
-							<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
+							<input class="mtext-107 cl2 size-114 plh2 text-light bg-secondary" type="text" name="search-product" placeholder="Search">
 						</div>
 					</form>
 				</div>
@@ -429,7 +425,7 @@ $products = getAllData('products');
 									<div class="block2-pic hov-img0">
 										<img src="./admin/img/<?php echo $product['image'] ?>" alt="IMG-PRODUCT">
 
-										<a href="./product-detail.php?productid=<?php echo $product['id'] ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
+										<a href="./product-detail.php?productid=<?php echo $product['id'] ?>" class="block2-btn flex-c-m stext-113 cl2 size-102 bg8 bor2 hov-btn5 p-lr-15 trans-02">
 											View
 										</a>
 									</div>
@@ -468,8 +464,8 @@ $products = getAllData('products');
 
 
 	<!-- Footer -->
-<?php 
-require "./footer.php"
+	<?php
+require './layout/footer.php'
 ?>
 
 	<!-- Back to top -->

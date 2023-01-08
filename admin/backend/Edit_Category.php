@@ -49,25 +49,27 @@ if(isset($_POST ['update'])){
 
 ?>
 
-<h1 class="page-header">
-   Edit Category
-</h1>
+<hr>
 <div class="container">
   <div class="row">
     <div class="col">
     <form action="" method="post" enctype="multipart/form-data">
     
-    <div class="form-group">
-        <label for="category-title">Title</label>
-        <input name="name" type="text" class="form-control" style="width:75% ;"  value="<?php echo $name; ?>">
+    <div class="form-group d-flex">
+        <div>
+        <label for="category-title" style="font-size: 2rem;">Category Name: </label>
+        </div>
+        <div>
+        <input name="name" type="text" class="form-control mt-2 ml-2" style="width:100% ;"  value="<?php echo $name; ?>">
+        </div>
     </div>
 <div><br></div>
 
 <label>Image Preview </label><br>
-	<img src=".\img\<?php echo $image;?>" height="100"><br>
+	<img src=".\img\<?php echo $image;?>" height="100" style="margin: 1rem;"><br>
 	<label>Change Image </label>
     <div class="form-group">
-    <label for="Category image">Category Image</label>
+    <label for="Category image">Category Image: </label>
     <input type="file" name="file">
   
 </div>
@@ -77,7 +79,7 @@ if(isset($_POST ['update'])){
 
     <div class="form-group">
         
-        <input name="update" type="submit" class="btn btn-primary" value="Add Category">
+        <input name="update" type="submit" class="btn btn-success" value="Add Category">
     </div>      
 </form>
 </div>
